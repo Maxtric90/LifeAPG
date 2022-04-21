@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.js"></script>
+    <script src="scriptUnificador.js"></script>
+</head>
+<body>
+    <header>
+        <div id="logoHeader"><img src="imgs/logo.jpg"></div>
+        <div id="lateralHeader"></div>
+    </header>
+    <div id="container">
+        <nav>
+            <div class="boton">
+                <a href="index.html">Certificado de no repetición</a>
+            </div>
+            <div class="boton">
+                <a href="endosos.html">Endoso 1</a>
+            </div>
+            <div class="boton">
+                <a href="endosos2.html">Endoso 2</a>
+            </div>
+            <div class="boton">
+                <a href="unificador.html">Unificador</a>
+            </div>
+            <br>
+        </nav>
+        <div id="centro">
+            <section id="comando">
+                <input type="file" id="file1"> <br>
+                <input type="file" id="file2"> <br>
+                <input type="file" id="file3"> <br>
+                <input type="file" id="file4"> <br>
+                <input type="file" id="file5"> <br>
+                <input type="file" id="file6"> <br>
+                <input type="file" id="file7"> <br>
+                <input type="file" id="file8"> <br>
+                <input type="file" id="file9"> <br>
+                <input type="file" id="file10"> <br>
+                <input type="file" id="file11"> <br>
+                <button onclick="merge()">Merge</button> <br>
+                <a id="link">Download</a>
+                <hr>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <div id="logoHeader"><img src="imgs/logo.jpg"></div>
+        <div id="lateralHeader"></div>
+    </header>
+    <div id="container">
+        <nav>
+            <div class="boton">
+                <a href="index.html">Certificado de no repetición</a>
+            </div>
+            <div class="boton">
+                <a href="endosos.html">Endoso 1</a>
+            </div>
+            <div class="boton">
+                <a href="endosos2.html">Endoso 2</a>
+            </div>
+            <div class="boton">
+                <a href="unificador.html">Unificador</a>
+            </div>
+            <br>
+        </nav>
+        <div id="centro">
+            <section id="comando">
+                <h3>Generador de CNR:</h3>
+                <form id="formCNR">
+                    <input type="text" id="tomadorInput" placeholder="Tomador"> <br>
+                    <input type="text" id="polizaInput" placeholder="Póliza"><br>
+                    <input type="text" id="empresaInput" placeholder="Empresa"><br><br>
+                    <button type="submit">Generar</button>
+                </form>
+                <hr>
+            </section>
+            <section id="CNR">
+                
+                <div id="logoCarta">
+                    <img src="imgs/logo.jpg" width="180">
+                </div>
+                <div id="direccionCarta">
+                    Life Seguros S.A.<br>
+                    Tte. Gral. J. de Perón 646 Piso 3<br>
+                    C1038AAN  - C.A.B.A. - Argentina<br>
+                </div>
+                <div id="contenidoCarta">
+                    <h4>CLAUSULA DE NO REPETICION</h4>
+                    <H5>Tomador: <span id="tomadorTextoTitulo">XXXXX</span></H5>
+                    <h5>Póliza: <span id="polizaTexto">XXXXX</span></h5>
+                    <p>
+                        Se deja expresa constancia que la Cía. Aseguradora renuncia en forma expresa a iniciar toda acción de repetición contra 
+                        <span id="empresaTexto"><strong>CREPS SG SA (30-71188184-7)</strong></span>, sus funcionarios, empleados y obreros, con motivo de las prestaciones en especies o dinerarias que se vea obligada a otorgar o abonar al personal dependiente o ex dependiente de 
+                        <span id="tomadorTextoCuerpo"><strong>CREPS SG SA (30-71188184-7)</strong></span> alcanzados por la cobertura de la presente póliza, por aquellos accidentes sufridos o contraídos por el hecho o en ocasión del trabajo o en el trayecto entre el domicilio y el lugar de trabajo.
+                    </p>
+                    <p>
+                        Se deja constancia que se otorgará cobertura siempre y cuando el personal asegurado se encuentre trabajando con las medidas de seguridad y protección inherentes a dicha actividad exigida por la Ley de Riesgos de Trabajo. En caso contrario la cobertura queda nula y sin valor, sin responsabilidad alguna por parte de Life Seguros S.A., de abonar la suma asegurada por la presente póliza.
+                    </p>
+                    <p>
+                        Se extiende el presente certificado el <span id="fechaHoy">XXXXX</span>.
+                    </p>
+                    <p>
+                        Life Seguros S.A.
+                    </p>
+                </div>
+                <div id="firma">
+                    <img src="imgs/firmaCEO.jpg">
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

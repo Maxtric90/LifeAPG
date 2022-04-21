@@ -1,0 +1,141 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin:0px;
+}
+
+header {
+    background-color: white;
+    display:flex;
+    width: 100%;
+    border-bottom: 2px solid black;
+    min-height:10rem;
+    align-items: center;
+}
+
+header #logoHeader{
+    width: 25%;
+    height: 100%;
+}
+
+header #logoHeader img{
+    width: 20rem;
+}
+
+#container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    padding-top:2rem;
+    width:18%;
+    background-color: white;
+    height: 100%;
+}
+
+nav .boton{
+    margin-top: 2px;
+    padding: 3px 3px 3px 3px;
+    background-color: rgb(211, 211, 211);
+}
+
+nav .boton a{
+    color:black;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+nav .boton:hover{
+    background-color: steelblue;
+    text-decoration: none;
+    font-size: 12px;
+    transition-property: all;
+    transition-delay: 0.1s;
+    transition-duration: 0.2s;
+    transform: translateX(10px);
+}
+
+#CNR {
+    width: 100%;
+    padding:2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#Endoso1 {
+    width: 100%;
+    padding:2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#logoCarta{
+    width:20rem;
+    align-items: center;
+}
+
+#direccionCarta{
+    width:20rem;
+    font-size: 12px;
+    color:gray;
+}
+
+#contenidoCarta{
+    width:100%;
+}
+
+#contenidoCarta h4{
+    font-size: 20px;
+    text-align: center;
+}
+
+#contenidoCarta h5{
+    font-size: 14px;
+    margin: 2px;
+    text-align: left;
+}
+
+#contenidoCarta p{
+    font-size: 14px;
+}
+
+#firma{
+    width:100%;
+    text-align: right;
+}
+
+#comando{
+    width: 100%;
+}
+
+#centro{
+    width:80%;
+    padding:1rem 0 0 5rem;
+}
+
+#centro input select{
+    margin-top: 2px;
+    margin-left: 4px;
+}
+
+#centro hr{
+    width:95%;
+    color:steelblue;
+    size:2px;
+    border-style: dashed;
+}

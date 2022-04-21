@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <div id="logoHeader"><img src="imgs/logo.jpg"></div>
+        <div id="lateralHeader"></div>
+    </header>
+    <div id="container">
+        <nav>
+            <div class="boton">
+                <a href="index.html">Certificado de no repetición</a>
+            </div>
+            <div class="boton">
+                <a href="endosos.html">Endoso 1</a>
+            </div>
+            <div class="boton">
+                <a href="endosos2.html">Endoso 2</a>
+            </div>
+            <div class="boton">
+                <a href="unificador.html">Unificador</a>
+            </div>
+            <br>
+        </nav>
+        <div id="centro">
+            <section id="comando">
+                <h3>Generador de Endoso 1:</h3>
+                <form id="formEndoso1" autocomplete="off">
+                    <input type="text" id="contratanteInput" placeholder="Contratante" size="80"> <br>
+                    <input type="text" id="polizaInput" placeholder="Póliza"><br>
+                    <input type="text" id="endosoInput" placeholder="Endoso"><br>
+                    <input type="number" id="vigenciaInputDia" placeholder="Día Inicio de vigencia" min="1" max="31" size="200"><br>
+                    <select id="vigenciaInputMes">
+                        <option value="0">Enero</option>
+                        <option value="1">Febrero</option>
+                        <option value="2">Marzo</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Mayo</option>
+                        <option value="5">Junio</option>
+                        <option value="6">Julio</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Septiembre</option>
+                        <option value="9">Octubre</option>
+                        <option value="10">Noviembre</option>
+                        <option value="11">Diciembre</option>
+                    </select><br>
+                    <input type="number" id="vigenciaInputAño" placeholder="Año Inicio de vigencia" min="2022" max="2025"><br>
+                    Póliza Indefinida: <input type="checkbox" id="checkIndefinida"><br>
+                    <select id="selectAmbitoCobertura">
+                        <option value="24hs">24hs</option>
+                        <option value="laboral">Laboral o In Itinere</option>
+                        <option value="deportesDurante">Deportes (Durante actividad)</option>
+                        <option value="deportesDuranteInItinere">Deportes (Durante actividad e in-itínere)</option>
+                        <option value="bailarines">Bailarines</option>
+                    </select><br>
+                    <input type="number" id="inputFranquicia" placeholder="Franquicia" min="0"><br>
+                    <input type="number" id="inputCumulo" placeholder="Cúmulo" min="0"><br>
+                    Cobertura Motocicletas<input type="checkbox" id="checkMotocicletas"><br>
+                    <input type="number" id="inputMargen" placeholder="Margen" min="0.1" value="1" step="0.1"><br><br>    
+                    <button type="submit">Generar</button>
+                </form>
+                <hr>
+            </section>
+
+            <section id="Endoso1">    
+                <div id="logoCarta">
+                    <img src="imgs/logo.jpg" width="180">
+                </div>
+                <div id="direccionCarta">
+                    Life Seguros S.A.<br>
+                    Tte. Gral. J. de Perón 646 Piso 3<br>
+                    C1038AAN  - C.A.B.A. - Argentina<br>
+                </div>
+                <div id="contenidoCarta">
+                    <br>
+                    <h5>Contratante: <span id="contratanteTitulo">XXXXX</span></h5>
+                    <h5>Póliza: <span id="polizaTitulo">XXXXX</span></h5>
+                    <h5>Endoso: <span id="endosoTitulo">XXXXX</span></h5>
+                    <br>
+                    <hr style="background-color:black;">
+                    <br>
+                    
+                    <div id="condicionesParticulares">
+                        <h5><u>CONDICIONES PARTICULARES</u></h5>
+                        <p>
+                            Se deja expresa constancia de las siguientes modificaciones a las Condiciones Particulares y Generales de la presente póliza, a partir de las cero (0) horas del día 
+                            <span id="dateTexto">XXXXX</span>.
+                        </p>
+                        <p id="condParticularesIndefinida">
+                            Esta póliza adquiere fuerza legal desde las cero (0) horas del día fijado como comienzo de su vigencia y se renueva en cada aniversario de la misma, por periodos anuales en forma automática.
+                        </p>
+                    </div>
+
+                    <div id="personasAsegurables">
+                        <h5><u>PERSONAS ASEGURABLES</u></h5>
+                        <p>    
+                            Sin perjuicio de los términos consignados en el artículo 6° de las Condiciones Generales de póliza, es requisito esencial para que la persona sea asegurable, que haya sido declarada en la nómina que se encuentra en poder de la Compañía Aseguradora, desligándose ésta de toda responsabilidad en caso de reclamo al respecto por omisión de esa obligación  por parte del tomador.  
+                        </p>
+                    </div>
+
+                    <div id="ambitoCobertura">
+                        <h5><u>ÁMBITO DE LA COBERTURA</u></h5>
+                        <p id="textoAmbitoCobertura">    
+                            Sin perjuicio de los términos consignados en el artículo 6° de las Condiciones Generales de póliza, es requisito esencial para que la persona sea asegurable, que haya sido declarada en la nómina que se encuentra en poder de la Compañía Aseguradora, desligándose ésta de toda responsabilidad en caso de reclamo al respecto por omisión de esa obligación  por parte del tomador.  
+                        </p>
+                    </div>
+
+                    <div id="limitacionesCobertura">
+                        <h5><u>LIMITACIONES DE COBERTURA</u></h5>
+                        <p id="textoLimitacionesCobertura">    
+                            <b>Limitaciones altura y profundidad:</b><br>
+                            <ul>
+                                <li>Limite máximo para trabajos en altura 7 metros (en exceso, cancelación de cobertura)</li>
+                                <li>Límite máximo para trabajos en profundida 1,5 metros (en exceso, cancelación de cobertura)</li>
+                            </ul>  
+                        </p>
+                        <p>
+                            <b>Franquicia:</b><br>
+                            Se deja expresa constancia que la cobertura de "Reembolso de Gastos Médicos" de la presente póliza posee una franquicia de <span id="spanFranquicia"></span> por todo y cada evento.
+                        </p>
+                        <p>
+                            <b>Cúmulo:</b><br>
+                            Se deja expresa constancia que la responsabilidad de la Compañía Aseguradora ante siniestros múltiples previstos en esta póliza está limitada a la suma asegurada equivalente a <span id="spanCumulo"></span> vidas por evento.
+                        </p>
+                    </div>
+
+                    <div id="divAmplicacionCobertura">
+                        <h5><u>AMPLIACIÓN DE COBERTURA</u></h5>
+                        <p>
+                            <b>Cobertura de moto</b><br>
+                            Contrariamente a lo establecido en la Clausula 4 (RIESGOS NO ASEGURADOS) de las Condiciones Generales de la presente póliza, la/s coebrtura/s de este seguro se extiende a los accidentes que le pudieran ocurrir a los asegurados, como consecuencia del uso de motocicletas y vehiculos similares, durante la vigencia de la misma. 
+                        </p>
+                    </div>
+                    <p>
+                        <b>Las demas Condiciones Generales y Particulares no se modifican.</b>
+                    </p>
+                    <p>
+                        Buenos Aires, <span id="fechaHoy">XXXXX</span>.
+                    </p>
+
+                    
+                </div>
+                <div id="firma">
+                    <img src="imgs/firmaCEO.jpg">
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="scriptEndosos.js"></script>
+</body>
+</html>
