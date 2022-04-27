@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <div id="logoHeader"><img src="imgs/logo.jpg"></div>
+        <div id="lateralHeader"></div>
+    </header>
+    <div id="container">
+        <nav>
+            <div class="boton">
+                <a href="index.html">Certificado de no repetición</a>
+            </div>
+            <div class="boton">
+                <a href="endosos.html">Endoso 1</a>
+            </div>
+            <div class="boton">
+                <a href="endosos2.html">Endoso 2</a>
+            </div>
+            <div class="boton">
+                <a href="unificador.html">Unificador</a>
+            </div>
+            <br>
+        </nav>
+        <div id="centro">
+            <section id="comando">
+                <h3>Generador de Endoso 2:</h3>
+                <form id="formEndoso1" autocomplete="off">
+                    Contratante: <input type="text" id="contratanteInput" placeholder="Contratante" size="80"> <br>
+                    Póliza: <input type="text" id="polizaInput" placeholder="Póliza"><br>
+                    Endoso: <input type="text" id="endosoInput" placeholder="Endoso" value="2"><br><br>
+                    Vigencia: <br><br>
+                    <input type="number" id="vigenciaInputDia" placeholder="Día Inicio de vigencia" min="1" max="31" size="200"><br>
+                    <select id="vigenciaInputMes">
+                        <option value="0">Enero</option>
+                        <option value="1">Febrero</option>
+                        <option value="2">Marzo</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Mayo</option>
+                        <option value="5">Junio</option>
+                        <option value="6">Julio</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Septiembre</option>
+                        <option value="9">Octubre</option>
+                        <option value="10">Noviembre</option>
+                        <option value="11">Diciembre</option>
+                    </select><br>
+                    <input type="number" id="vigenciaInputAño" placeholder="Año Inicio de vigencia" min="2022" max="2025"><br>
+                    <button type="submit">Generar</button>
+                </form>
+                <hr>
+            </section>
+
+            <section id="Endoso1">    
+                <div id="logoCarta">
+                    <img src="imgs/logo.jpg" width="180">
+                </div>
+                <div id="direccionCarta">
+                    Life Seguros S.A.<br>
+                    Tte. Gral. J. de Perón 646 Piso 3<br>
+                    C1038AAN  - C.A.B.A. - Argentina<br>
+                </div>
+                <div id="contenidoCarta">
+                    <br>
+                    <h5>Contratante: <span id="contratanteTitulo">XXXXX</span></h5>
+                    <h5>Póliza: <span id="polizaTitulo">XXXXX</span></h5>
+                    <h5>Endoso: <span id="endosoTitulo">XXXXX</span></h5>
+                    <br>
+                    <hr style="background-color:black;">
+                    <br>
+                    
+                    <div id="condicionesParticulares">
+                        <h5><u>CONDICIONES PARTICULARES</u></h5>
+                        <p>
+                            Se deja expresa constancia de las siguientes modificaciones a las Condiciones Particulares y Generales de la presente póliza, a partir de las cero (0) horas del día 
+                            <span id="dateTexto">XXXXX</span>.
+                        </p>
+                    </div>
+
+                    <div id="divClausulaContratante">
+                        <h5><u>CLAUSULA DE CONTRATANTE - BENEFICIARIO (primer término)</u></h5>
+                        <p>    
+                            El Contratante de esta póliza queda instituido como beneficiario en primer término de toda indemnización que deba abonarse a los asegurados o a sus beneficiarios, hasta el importe que el Contratante esté obligado a pagar en virtud de su responsabilidad civil respecto de los asegurados individuales.
+                        </p>
+                        <p>
+                            En consecuencia y contrariamente a lo establecido en el artículo 8 de las Condiciones Generales y en la Cláusula de Invalidez Total y Permanente y Accidente, queda entendido y convenido que el importe de cualquier indemnización que la Compañía deba liquidar en virtud de la presente póliza, será abonado al Contratante, debiendo éste descontar para sí la suma correspondiente a cualquier obligación a su cargo en virtud de su responsabilidad civil respecto del asegurado individual, y entregar el remanente, si existiera, a quien acredite su derecho por disposición contractual y/o legal.
+                        </p>
+                        <p>
+                            El Contratante asume total responsabilidad por el eventual pago que deba efectuarse a la persona indicada en el párrafo anterior, quedando la Compañía válidamente liberada de sus obligaciones una vez abonado el importe de la indemnización al Contratante. Por lo tanto, el Contratante se compromete a mantener indemne a la Compañía ante cualquier reclamo originado en el incumplimiento del Contratante de la obligación asumida en el párrafo precedente.
+                        </p>
+                        <p>
+                            Sin perjuicio de lo anterior, el Contratante tendrá la obligación de proporcionar a la Compañía prueba del pago efectuado a quien contractual y/o legalmente correspondiere mediante entrega del recibo original debidamente suscripto, o copia autenticada si esto no fuera posible.
+                        </p>
+                        <p>
+                            Queda aclarado que en ningún caso la Compañía será obligada a abonar al Contratante, o a quien invocare cualquier eventual derecho, una suma mayor al capital asegurado para cada certificado individual de esta póliza, por ningún concepto. En caso de que el capital asegurado para cada certificado individual no alcance a cubrir la suma que, conforme a las normas legales o convencionales, el Contratante deba abonar a sus dependientes, dicho excedente será a exclusivo cargo del Contratante de esta póliza, quedando totalmente liberada la Aseguradora de su obligación con el pago total de la suma asegurada vigente al momento del siniestro.  
+                        </p>
+                    </div>
+                    <p>
+                        <b>Las demas Condiciones Generales y Particulares no se modifican.</b>
+                    </p>
+                    <p>
+                        Buenos Aires, <span id="fechaHoy">XXXXX</span>.
+                    </p>
+                </div>
+                <div id="firma">
+                    <img src="imgs/firmaCEO.jpg">
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="scriptEndosos2.js"></script>
+</body>
+</html>
