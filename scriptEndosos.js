@@ -16,6 +16,7 @@ formEndoso1.addEventListener('submit', (event) => {
     var inputFranquicia = formEndoso1.elements['inputFranquicia'].value;
     var inputCumulo = formEndoso1.elements['inputCumulo'].value;
     const checkMotocicletas =formEndoso1.elements['checkMotocicletas'].checked;
+    const checkMenores =formEndoso1.elements['checkMotocicletas'].checked;
     var inputMargen = parseFloat(formEndoso1.elements['inputMargen'].value);
 
     const Endoso1=document.getElementById('Endoso1');
@@ -30,6 +31,7 @@ formEndoso1.addEventListener('submit', (event) => {
     const spanFranquicia =document.getElementById('spanFranquicia');
     const spanCumulo =document.getElementById('spanCumulo');
     const divAmplicacionCobertura =document.getElementById('divAmplicacionCobertura');
+    const divpersonasAsegurables =document.getElementById('divPersonasAsegurables');
 
     condParticularesIndefinida
     contratanteTitulo.innerHTML='<strong>' + contratanteInput + '</strong>';
@@ -41,6 +43,17 @@ formEndoso1.addEventListener('submit', (event) => {
       condParticularesIndefinida.innerHTML = '';
     }else{
       condParticularesIndefinida.innerHTML = 'Esta póliza adquiere fuerza legal desde las cero (0) horas del día fijado como comienzo de su vigencia y se renueva en cada aniversario de la misma, por periodos anuales en forma automática.';
+    }
+
+    //PERSONAS ASEGURABLES
+    divpersonasAsegurables.innerHTML=`                        
+    <h5><u>PERSONAS ASEGURABLES</u></h5>
+    <p>    
+        Sin perjuicio de los términos consignados en el artículo 6° de las Condiciones Generales de póliza, es requisito esencial para que la persona sea asegurable, que haya sido declarada en la nómina que se encuentra en poder de la Compañía Aseguradora, desligándose ésta de toda responsabilidad en caso de reclamo al respecto por omisión de esa obligación  por parte del tomador.  
+    </p>
+    `
+    if(checkMenores){
+      divpersonasAsegurables.innerHTML += `<p>Se deja constancia que la presente póliza, brinda cobertura a menores de 14 años de edad.-</p>`
     }
 
     //AMBITO DE COBERTURA
