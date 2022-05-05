@@ -16,7 +16,7 @@ formEndoso1.addEventListener('submit', (event) => {
     var inputFranquicia = formEndoso1.elements['inputFranquicia'].value;
     var inputCumulo = formEndoso1.elements['inputCumulo'].value;
     const checkMotocicletas =formEndoso1.elements['checkMotocicletas'].checked;
-    const checkMenores =formEndoso1.elements['checkMotocicletas'].checked;
+    const checkMenores =formEndoso1.elements['checkMenores'].checked;
     var inputMargen = parseFloat(formEndoso1.elements['inputMargen'].value);
 
     const Endoso1=document.getElementById('Endoso1');
@@ -32,6 +32,14 @@ formEndoso1.addEventListener('submit', (event) => {
     const spanCumulo =document.getElementById('spanCumulo');
     const divAmplicacionCobertura =document.getElementById('divAmplicacionCobertura');
     const divpersonasAsegurables =document.getElementById('divPersonasAsegurables');
+
+    //Endoso 2
+    const Endoso2=document.getElementById('Endoso2');
+    const contratanteTitulo2 =document.getElementById('contratanteTitulo2');
+    const polizaTitulo2 =document.getElementById('polizaTitulo2');
+    const endosoTitulo2 =document.getElementById('endosoTitulo2');
+    const dateTexto2 =document.getElementById('dateTexto2');
+    const fechaHoy2 =document.getElementById('fechaHoy2');
 
     condParticularesIndefinida
     contratanteTitulo.innerHTML='<strong>' + contratanteInput + '</strong>';
@@ -52,6 +60,7 @@ formEndoso1.addEventListener('submit', (event) => {
         Sin perjuicio de los términos consignados en el artículo 6° de las Condiciones Generales de póliza, es requisito esencial para que la persona sea asegurable, que haya sido declarada en la nómina que se encuentra en poder de la Compañía Aseguradora, desligándose ésta de toda responsabilidad en caso de reclamo al respecto por omisión de esa obligación  por parte del tomador.  
     </p>
     `
+
     if(checkMenores){
       divpersonasAsegurables.innerHTML += `<p>Se deja constancia que la presente póliza, brinda cobertura a menores de 14 años de edad.-</p>`
     }
@@ -103,6 +112,27 @@ formEndoso1.addEventListener('submit', (event) => {
       };
 
     html2pdf().set(opt).from(Endoso1).save();
+
+
+    //Endoso 2 
+
+    contratanteTitulo2.innerHTML='<strong>' + contratanteInput + '</strong>';
+    polizaTitulo2.innerHTML='<strong>' + polizaInput + '</strong>';
+    endosoTitulo2.innerHTML='<strong>' + 2 + '</strong>';
+    dateTexto2.innerHTML='<strong>' + vigenciaInputDia+ ' de ' + Meses[vigenciaInputMes] + ' de ' + vigenciaInputAño + '</strong>';
+    fechaHoy2.innerHTML='<strong>' + hoy.getDate()+ ' de ' + Meses[hoy.getMonth()] + ' de ' + hoy.getFullYear() + '</strong>';
+    
+
+    let opt2 = {
+      margin:       0.6,
+      filename:     `${polizaInput} - Endoso 02.pdf`,
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+  html2pdf().set(opt2).from(Endoso2).save();
+
 });
 
 function Unidades(num){

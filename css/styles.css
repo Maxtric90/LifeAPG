@@ -84,7 +84,22 @@ nav .boton:hover{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#Endoso2 {
+    width: 100%;
+    padding:2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 #logoCarta{
+    width:20rem;
+    align-items: center;
+}
+
+#logoCarta2{
     width:20rem;
     align-items: center;
 }
@@ -95,11 +110,26 @@ nav .boton:hover{
     color:gray;
 }
 
+#direccionCarta2{
+    width:20rem;
+    font-size: 12px;
+    color:gray;
+}
+
 #contenidoCarta{
     width:100%;
 }
 
+#contenidoCarta2{
+    width:100%;
+}
+
 #contenidoCarta h4{
+    font-size: 20px;
+    text-align: center;
+}
+
+#contenidoCarta2 h4{
     font-size: 20px;
     text-align: center;
 }
@@ -110,11 +140,26 @@ nav .boton:hover{
     text-align: left;
 }
 
+#contenidoCarta2 h5{
+    font-size: 14px;
+    margin: 2px;
+    text-align: left;
+}
+
 #contenidoCarta p{
     font-size: 14px;
 }
 
+#contenidoCarta2 p{
+    font-size: 14px;
+}
+
 #firma{
+    width:100%;
+    text-align: right;
+}
+
+#firma2{
     width:100%;
     text-align: right;
 }
@@ -139,3 +184,4 @@ nav .boton:hover{
     size:2px;
     border-style: dashed;
 }
+
